@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@hr_0_" />
+    <meta property="og:url" content="https://hrn0.github.io/zzz/index.html" />
+    <meta property="og:title" content="診断メーカーのパクリ" />
+    <meta property="og:description" content="診断メーカーの質が落ちたパクリです。" />
+    <meta property="og:image" content="https://hrn0.github.io/zzz/2.png" />
+
+    <title>診断メーカーのパクリ</title>
+    <style media="screen">
+    body{
+      width: 500px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    section{
+      margin-top: 10px;
+      padding: 10px;
+      background: linear-gradient(-90deg,rgba(100,10,250,0.4),rgba(250,10,100,0.4));
+      border-radius: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>診断メーカーのパクリ（低クオ）</h1>
+    <canvas id="myChart"></canvas>
+    <section>
+      <div id="t1"></div>
+      <div id="t2"></div>
+      <div id="t3"></div>
+      <div id="t4"></div>
+      <div id="t5"></div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script type="text/javascript">
+    const num1 = Math.floor(Math.random()*100+1);
+    const num2 = Math.floor(Math.random()*100+1);
+    const num3 = Math.floor(Math.random()*100+1);
+    const num4 = Math.floor(Math.random()*100+1);
+    const num5 = Math.floor(Math.random()*100+1);
+    const numte = Math.floor(Math.random()*5+1);
+    var te = "a";
+    var te2 = "a";
+    var te3 = "a";
+    var te4 = "a";
+    var te5 = "a";
+    const text1 = '面白さ';
+    const text2 = '元気さ';
+    const text3 = '冷酷さ';
+    const text4 = '不細工さ';
+    const text5 = '頭の良さ';
+    const text6 = '厳しさ';
+    const text7 = '怒りやすさ';
+    const text8 = '真面目さ';
+
+{
+    if (numte == 1) {
+      te = text6;
+      te2 = text7;
+      te3 = text2;
+      te4 = text1;
+      te5 = text8;
+    } else if(numte == 2){
+      te = text4;
+      te2 = text1;
+      te3 = text3;
+      te4 = text5;
+      te5 = text7;
+    } else if(numte == 3){
+      te = text7;
+      te2 = text8;
+      te3 = text2;
+      te4 = text5;
+      te5 = text4;
+    } else if(numte == 4){
+      te = text5;
+      te2 = text8;
+      te3 = text1;
+      te4 = text3;
+      te5 = text6;
+    } else {
+      te = text8;
+      te2 = text7;
+      te3 = text5;
+      te4 = text4;
+      te5 = text2;
+    }
+}
+
+   var ctx = document.getElementById("myChart").getContext('2d');
+   var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [`${te}`, `${te2}`, `${te3}`, `${te4}`, `${te5}`],
+      datasets: [{
+        label: 'score',
+        data: [num1, num2, num3, num4, num5],
+        backgroundColor: "rgba(250,10,100,0.4)"}]
+    }
+  });
+  t1.textContent = `${te}:${num1}`;
+  t2.textContent = `${te2}:${num2}`;
+  t3.textContent = `${te3}:${num3}`;
+  t4.textContent = `${te4}:${num4}`;
+  t5.textContent = `${te5}:${num5}`;
+    </script>
+  </body>
+</html>
